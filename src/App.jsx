@@ -11,14 +11,14 @@ import Card from './components/Card';
 // Ozymandias
 
 export default function App() {
-     const [empresa, setEmpresa] = useState("");
+     const [empresa, setEmpresa] = useState([""]);
      const submitForm = async(inputparam) => {    
           try {
             // const response = await fetch("https://jsonplaceholder.typicode.com/todos/" )
             const response = await fetch(`https://poetrydb.org/title/${inputparam}` )
             const data = await response.json();
             setEmpresa(data);
-            console.log(empresa  + " " + empresa)
+            console.log("empresa " + " " + empresa)
                            
           } catch (error) {
             throw new Error(`HTTP STATUS: ${response.status}`);
