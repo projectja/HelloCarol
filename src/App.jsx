@@ -18,7 +18,7 @@ export default function App() {
             const response = await fetch(`https://poetrydb.org/title/${inputparam}` )
             const data = await response.json();
             setEmpresa(data);
-            console.log("empresa " + " " + empresa)
+            console.log("empresa es un cambio interesante " + " " + empresa)
                            
           } catch (error) {
             throw new Error(`HTTP STATUS: ${response.status}`);
